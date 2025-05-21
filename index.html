@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Car ChatBot</title>
+  <meta name="viewport" content="width=350, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <style>
+    body {
+      margin: 0;
+      background: #f3f6fc;
+      font-family: "Google Sans", Arial, sans-serif;
+      min-height: 100vh;
+    }
+    header {
+      background: #d3e3fd;
+      color: #333;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+    main {
+      padding: 1rem;
+      max-width: 350px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .info {
+      color: #5f6368;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      --df-messenger-font-color: #000;
+      --df-messenger-font-family: Google Sans;
+      --df-messenger-chat-background: #f3f6fc;
+      --df-messenger-message-user-background: #d3e3fd;
+      --df-messenger-message-bot-background: #fff;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      width: 350px;
+      box-shadow: -2px 0 8px rgba(0,0,0,0.08);
+    }
+    @media (max-width: 400px) {
+      main, df-messenger {
+        width: 100vw !important;
+      }
+      df-messenger {
+        left: 0;
+        right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Car ChatBot
+  </header>
+  <main>
+    <div class="info">
+      Вітаємо у Car ChatBot! Поставте своє питання щодо автомобілів і отримайте миттєву відповідь.
+    </div>
+  </main>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+  <df-messenger
+    project-id="famous-gecko-452717-m3"
+    agent-id="20f6e311-544e-4852-84aa-c2aecb1b1471"
+    language-code="uk"
+    max-query-length="-1">
+    <df-messenger-chat
+      chat-title="Car ChatBot">
+    </df-messenger-chat>
+  </df-messenger>
+</body>
+</html>
